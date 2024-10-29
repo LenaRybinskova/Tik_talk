@@ -3,6 +3,7 @@ import {inject} from '@angular/core';
 import {Router} from '@angular/router';
 
 export const canActivateAuth = () => {
+  console.log("Гард canActivateAuth")
   const isLoggedIn = inject(AuthService).isAuth
 
   if(isLoggedIn) {

@@ -38,6 +38,7 @@ export class LoginPageComponent {
   }*/
 
   onSubmit() {
+    console.log("onSubmit")
     if (this.form.valid) {
       //@ts-ignore
       this.authService.login(this.form.value).pipe(tap(1)).subscribe(auth => {
