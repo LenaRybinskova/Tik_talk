@@ -6,18 +6,31 @@
   margin: 0 5%;
 }
 
-.btn-eye {
+.login-form {
+  width: 440px;
 }
 
-.tt-control-label {
+.login-form,
+.big-logo {
+  place-self: center; //центр по х у
+}
+
+.password-input {
   position: relative;
 }
 
-.input-eye-button {
+.password-eye-button {
   position: absolute;
-  top: 55%;
   right: 12px;
   border: none;
   background: none;
-  color: #5f646d;
+  color: #ffffffbf;
+  top: 55%; // сделали верхн гран свг по центру, но она получается все равно как бы ниже уровня серидины
+  transform: translateY(
+    -50%
+  ); //поднимает элемент вверх на 50% его собственной высоты
+}
+
+.password-eye-button.active {
+  color: var(--primary-color);
 }

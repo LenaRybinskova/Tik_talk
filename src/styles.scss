@@ -6,7 +6,8 @@
   --dark-color: #000000;
   --light-color: #ffffff;
   --primary-color: #ae7aff;
-  --shadow-color: #5F646D;
+  --shadow-color: #5f646d;
+  --dark-hover-color: #161616;
 }
 
 *,
@@ -36,11 +37,11 @@ body {
   border: 1px solid var(--dark-color);
 }
 
-.btn-shadow{
+.btn-shadow {
   position: relative;
 
-  &:before{
-    content:"";
+  &:before {
+    content: "";
     position: absolute;
     z-index: -1;
     bottom: -4px;
@@ -50,9 +51,7 @@ body {
     height: 100%;
     border-radius: 4px;
   }
-
 }
-
 
 .h1 {
   font-size: 48px;
