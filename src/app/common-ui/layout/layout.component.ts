@@ -1,9 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SidebarComponent } from '../sidebar/sidebar.component';
-import { ProfileService } from '../../data/services/profile.service';
-import { RouterModule } from '@angular/router';
-import { RouterLink } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterLink, RouterModule, RouterOutlet} from '@angular/router';
+import {SidebarComponent} from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-layout',
@@ -13,9 +10,4 @@ import { RouterLink } from '@angular/router';
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
-  profileService = inject(ProfileService);
-
-  ngOnInit(): void {
-    this.profileService.getMe().subscribe((res) => console.log(res));
-  }
 }

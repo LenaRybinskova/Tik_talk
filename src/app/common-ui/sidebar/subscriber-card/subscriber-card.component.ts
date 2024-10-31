@@ -1,8 +1,7 @@
-import { Profile } from '../../../data/interfaces/profile.interface';
-import { Component, Input } from '@angular/core';
-import { ImgUrlPipe } from '../../../helpers/pipes/img-url.pipe';
-import { RouterModule } from '@angular/router';
-import { RouterLink } from '@angular/router';
+import {Profile} from '../../../data/interfaces/profile.interface';
+import {Component, Input} from '@angular/core';
+import {ImgUrlPipe} from '../../../helpers/pipes/img-url.pipe';
+import {RouterLink, RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-subscriber-card',

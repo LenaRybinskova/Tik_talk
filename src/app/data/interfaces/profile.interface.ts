@@ -1,4 +1,5 @@
 export interface Profile {
+  [x: string]: any;
   id: number;
   username: string;
   avatarUrl: string | null;
