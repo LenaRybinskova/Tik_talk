@@ -4,14 +4,17 @@ import {ProfileService} from '../../data/services/profile.service';
 import {ActivatedRoute} from '@angular/router';
 import {switchMap} from 'rxjs';
 import {toObservable} from '@angular/core/rxjs-interop';
-import {AsyncPipe} from '@angular/common';
+import {AsyncPipe, NgForOf} from '@angular/common';
 import {RouterLink, RouterModule} from '@angular/router';
 import {SvgIconComponent} from '../../../app/common-ui/svg-icon/svg-icon.component';
+import {SubscriberCardComponent} from '../../../app/common-ui/sidebar/subscriber-card/subscriber-card.component';
+import {ImgUrlPipe} from '../../../app/helpers/pipes/img-url.pipe';
+
 
 @Component({
   selector: 'app-profile-page',
   standalone: true,
-  imports: [ProfileHeaderComponent, AsyncPipe, RouterLink, RouterModule, SvgIconComponent],
+  imports: [ProfileHeaderComponent, AsyncPipe, RouterLink, RouterModule, SvgIconComponent, NgForOf, SubscriberCardComponent, ImgUrlPipe],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.scss'
 })
@@ -19,6 +22,7 @@ export class ProfilePageComponent {
   profileService = inject(ProfileService);
   route = inject(ActivatedRoute); //ActivatedRoute сервис для раб с УРЛ
   me$= toObservable(this.profileService.me) //рез getMe() объект Profile
+  subscribers$ = this.profileService.getSubscribersShortList(5);
 
   profile$ = this.route.params // созд поток, он следит за текущ УРЛ :id
     .pipe(
