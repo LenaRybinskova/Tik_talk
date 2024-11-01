@@ -4,13 +4,11 @@ import {SearchPageComponent} from '../app/pages/search-page/search-page.componen
 import {ProfilePageComponent} from '../app/pages/profile-page/profile-page.component';
 import {LayoutComponent} from '../app/common-ui/layout/layout.component';
 import {canActivateAuth} from '../../src/app/auth/access.guard';
-import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   {path: '', component: LayoutComponent, children: [
       {path: '', component: SearchPageComponent},
-      {path: 'profile', component: ProfilePageComponent}
+      {path: 'profile/:id', component: ProfilePageComponent} //profile/me
     ],canActivate:[canActivateAuth]
   },
   {path: 'login', component: LoginPageComponent},
