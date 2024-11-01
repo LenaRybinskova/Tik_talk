@@ -9,12 +9,13 @@ import {RouterLink, RouterModule} from '@angular/router';
 import {SvgIconComponent} from '../../../app/common-ui/svg-icon/svg-icon.component';
 import {SubscriberCardComponent} from '../../../app/common-ui/sidebar/subscriber-card/subscriber-card.component';
 import {ImgUrlPipe} from '../../../app/helpers/pipes/img-url.pipe';
+import {PostFeedComponent} from '../../pages/profile-page/post-feed/post-feed.component';
 
 
 @Component({
   selector: 'app-profile-page',
   standalone: true,
-  imports: [ProfileHeaderComponent, AsyncPipe, RouterLink, RouterModule, SvgIconComponent, NgForOf, SubscriberCardComponent, ImgUrlPipe],
+  imports: [ProfileHeaderComponent, AsyncPipe, RouterLink, RouterModule, SvgIconComponent, NgForOf, SubscriberCardComponent, ImgUrlPipe, PostFeedComponent],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.scss'
 })
