@@ -15,8 +15,8 @@
     </div>
 
     <label class="tt-form-label">
-      <span class="tt-form-label__text">Telegram username</span>
-      <input type="text" class="tt-form-input" formControlName="userName"/>
+      <span class="tt-form-label__text"></span>
+      <input type="text" class="tt-form-input" formControlName="username"/>
     </label>
 
     <label class="tt-form-label">
@@ -32,7 +32,7 @@
 
   <div>
     <div>
-      <button class="btn">Сохранить</button>
+      <button class="btn" (click)="onSave()">Сохранить</button>
     </div>
   </div>
 </form>
